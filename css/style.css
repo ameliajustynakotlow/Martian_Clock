@@ -1,0 +1,95 @@
+html, body, #background-image {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#background-image {
+  background-position: center;
+  background-size: cover;
+  transition: background .5s ease-in-out;
+}
+
+.astronaut {
+  width: 150px;
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 75px);
+  animation: 40s float linear infinite;
+}
+
+.astronaut > img {
+  width: 100%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.clock-box {
+  width: 50vw;
+  height: 300px;
+  position: absolute;
+  left: calc(50% - 25vw);
+  top: calc(50% - 150px);
+}
+
+#martian-clock {
+  font-family: 'Teko', sans-serif;
+  text-align: center;
+  font-size: 165px;
+  color: white;
+  margin: 0;
+  text-shadow: 4px 4px black;
+  margin-top: -30px;
+}
+
+.clock-info {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 23px;
+  text-shadow: 2px 2px #000;
+}
+
+.clock-buttons {
+  margin: auto;
+  width: fit-content;
+}
+
+.clock-button {
+  color: #FFFFFF;
+  display: inline-block;
+  height: 60px;
+  width: 185px;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  font-size: 34px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clock-button:hover {
+  opacity: 0.8;
+}
+
+#day-button {
+  background-image: linear-gradient(to right top, #fab823, #f9a315, #f68d0c, #f3770d, #ee5f13);
+}
+
+#night-button {
+  background-image: linear-gradient(to top, #a94bb9, #9b46b7, #8d42b5, #7d3eb2, #6d3ab0);
+}
+
+/* CSS ANIMATION */
+@keyframes float {
+  0% { top: calc(100% - 75px); left: calc(50% - 75px); }
+  25% { top: calc(50% - 27px); left: 0; }
+  50% { top: 0; left: calc(50% - 75px); }
+  75% { top: calc(50% - 27px); left: calc(100% - 150px); }
+  100% { top: calc(100% - 75px); left: calc(50% - 75px); }
+}
